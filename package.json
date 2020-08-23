@@ -30,5 +30,8 @@
     "babel-jest": "^26.3.0",
     "jest": "^26.4.2",
     "regenerator-runtime": "^0.13.7"
+  },
+  "dependencies": {
+    "svelte": "^3.24.1"
   }
 }
