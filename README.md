@@ -21,6 +21,12 @@ If you're using it to fetch data from a backend API, try using [`axios`](https:/
 
 ## Examples
 
+On Svelte's REPL:
+
+- [promisable](https://svelte.dev/repl/308a64be27124f23ab5f942047c9c30c?version=3.24.1)
+- [derivedPromisable](https://svelte.dev/repl/ebc66e9c501b40e6a86c8aa12dfb2167?version=3.24.1)
+
+
 ### `promisable`
 
 ```js
@@ -168,7 +174,3 @@ Returns:
 
 - `subscribe`: directly from the embedded `derived` store;
 - `isPromisable`: always set to `true`. Only used internally on `derivedPromisable` stores, for a better developer experience (no `.then`s inside `shouldRefreshPromise`).
-
-## TODO
-
-- codesandbox link
