@@ -46,7 +46,7 @@ export function derivedPromisable(
   shouldRefreshPromise = () => true
 ) {
   if (!derivedStore)
-    throw new Error('You should provide a store to derive from');
+    throw new Error('You should provide a store to derive from.');
   if (!promiseFunction || typeof promiseFunction !== "function") {
     throw new Error(
       `The provided promiseFunction was not a function. It was ${typeof promiseFunction}.`
@@ -72,7 +72,7 @@ export function derivedPromisable(
       ) {
         if ($derivedStore && derivedStore.isPromisable) {
           $derivedStore.then((data) => set(promiseFunction(data)));
-        } else if ($derivedStore) {
+        } else {
           set(promiseFunction($derivedStore));
         }
         previousDerivedState = get(derivedStore);

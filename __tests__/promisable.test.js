@@ -34,6 +34,13 @@ describe("promisable", () => {
     expect(get(testPromisable)).toBe("testValue");
   });
 
+  it("does not call promiseFunction if shouldRefreshPromise returns false", async () => {
+    const mockPromiseFunction = jest.fn(() => "testValue");
+    const testPromisable = promisable(mockPromiseFunction, () => false);
+    testPromisable.dispatch("arg1", "arg2");
+    expect(mockPromiseFunction).not.toHaveBeenCalled();
+  });
+
   it("calls shouldRefreshPromise when calling dispatch method passing args", async () => {
     const mockShouldRefresh = jest.fn(() => true);
     const testPromisable = promisable(
