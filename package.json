@@ -4,8 +4,11 @@
   "description": "Svelte stores to manage and save promises/API calls.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "npm test -- --coverage",
+    "test:badges": "npm run test:coverage && jest-coverage-badges output './badges'"
   },
+  "files": ["index.js"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lucianoratamero/svelte-promisable-stores.git"
@@ -29,10 +32,19 @@
     "@babel/plugin-transform-runtime": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
     "babel-jest": "^26.3.0",
+    "coveralls": "^3.1.0",
     "jest": "^26.4.2",
+    "jest-coverage-badges": "^1.1.2",
     "regenerator-runtime": "^0.13.7"
   },
   "dependencies": {
     "svelte": "^3.24.1"
+  },
+  "jest": {
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ]
   }
 }
