@@ -1,7 +1,7 @@
 import { writable, derived, get } from 'svelte/store';
 
 export function promisable(promiseFunction, shouldRefreshPromise = () => true) {
-  if (!promiseFunction && typeof promiseFunction !== "function") {
+  if (!promiseFunction || typeof promiseFunction !== "function") {
     throw new Error(
       `The provided promiseFunction was not a function. It was ${typeof promiseFunction}.`
     );
@@ -47,7 +47,7 @@ export function derivedPromisable(
 ) {
   if (!derivedStore)
     throw new Error('You should provide a store to derive from');
-  if (!promiseFunction && typeof promiseFunction !== "function") {
+  if (!promiseFunction || typeof promiseFunction !== "function") {
     throw new Error(
       `The provided promiseFunction was not a function. It was ${typeof promiseFunction}.`
     );

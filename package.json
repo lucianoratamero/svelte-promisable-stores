@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/lucianoratamero/svelte-promisable-stores.git"
   },
+  "type": "module",
   "keywords": [
     "svelte",
     "sapper",
