@@ -1,0 +1,26 @@
+{
+  "name": "svelte-promisable-stores",
+  "version": "0.0.1",
+  "description": "Svelte stores to manage and save promises/API calls.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucianoratamero/svelte-promisable-stores.git"
+  },
+  "keywords": [
+    "svelte",
+    "sapper",
+    "store",
+    "promise",
+    "promisable"
+  ],
+  "author": "Luciano Ratamero",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucianoratamero/svelte-promisable-stores/issues"
+  },
+  "homepage": "https://github.com/lucianoratamero/svelte-promisable-stores#readme"
+}
