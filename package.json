@@ -1,6 +1,6 @@
 {
   "name": "svelte-promisable-stores",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Svelte stores to manage and save promises/API calls.",
   "main": "index.js",
   "scripts": {
